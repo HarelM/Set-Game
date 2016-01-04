@@ -1,0 +1,13 @@
+﻿<Window x:Class="Set.AddNewRecord"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Game Completed" Height="156" Width="219" Loaded="Window_Loaded">
+    <Grid>
+        <Button HorizontalAlignment="Left" Margin="12,0,0,28" Name="buttonNewGame" Width="63" Height="25" VerticalAlignment="Bottom" Click="buttonNewGame_Click">New Game</Button>
+        <Button Margin="133,0,0,28" Name="buttonDone" HorizontalAlignment="Left" Width="63" Height="25" VerticalAlignment="Bottom" Click="buttonDone_Click">Done</Button>
+        <TextBlock HorizontalAlignment="Left" Name="label1" Width="78" Margin="12,33,0,62">Enter Name</TextBlock>
+        <TextBlock Height="25" Margin="12,10,1,0" Name="textBlockScore" VerticalAlignment="Top">Score</TextBlock>
+        <TextBox Margin="107,33,0,0" Name="textBoxName" HorizontalAlignment="Left" Width="89" Height="23" VerticalAlignment="Top" />
+        
+    </Grid>
+</Window>

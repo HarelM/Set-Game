@@ -1,0 +1,63 @@
+﻿<Window x:Class="Set.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Set"
+    ResizeMode="CanResizeWithGrip"
+    Title=" SET " Height="500" Width="535" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Background="LimeGreen" PreviewKeyDown="Window_PreviewKeyDown" Icon="/Set;component/Set.ico">
+    <DockPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" Width="Auto">
+        <StatusBar Name="statusBar1" DockPanel.Dock="Bottom">
+            <StatusBarItem DockPanel.Dock="Right">
+                <Button Name="buttonHelpMe" DockPanel.Dock="Right" Margin="10,0,10,0" Click="buttonHelpMe_Click">Help Me</Button>
+            </StatusBarItem>
+            <TextBlock x:Name="textBlockRunningTime" Margin="10,0,10,0">Running Time: 00:00:00</TextBlock>
+            <Separator/>
+            <TextBlock x:Name="textBlockCardsLeft" Margin="10,0,10,0" >Card Left: 69</TextBlock>
+            <Separator/>
+            <TextBlock x:Name="textBlockScore" Margin="10,0,10,0" >Score: 0</TextBlock>
+        </StatusBar>
+        <Menu Height="22" Name="menuMain" DockPanel.Dock="Top">
+            <MenuItem Header="Game">
+                <MenuItem Header="New Game" Name="menuNewGame" Click="menuNewGame_Click" InputGestureText="F2"/>
+                <MenuItem Header="Exit" Name="menuExit" Click="menuExit_Click" InputGestureText="Alt+F4"/>
+            </MenuItem>
+            <MenuItem Header="Records">
+                <MenuItem Header="See Record Table" Name="menuShowRecords" Click="menuShowRecords_Click" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="How To Play" Name="menuHowToPlay" Click="menuHowToPlay_Click" InputGestureText="F1"/>
+                <MenuItem Header="About" Name="menuAbout" Click="menuAbout_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Name="gridMain" MouseLeftButtonDown="gridMain_MouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Canvas Grid.Row="0" Grid.Column="0" />
+            <Canvas Grid.Row="1" Grid.Column="0" />
+            <Canvas Grid.Row="2" Grid.Column="0" />
+            <Canvas Grid.Row="3" Grid.Column="0" />
+            <Canvas Grid.Row="4" Grid.Column="0" />
+            
+            <Canvas Grid.Row="0" Grid.Column="1" />
+            <Canvas Grid.Row="1" Grid.Column="1" />
+            <Canvas Grid.Row="2" Grid.Column="1" />
+            <Canvas Grid.Row="3" Grid.Column="1" />
+            <Canvas Grid.Row="4" Grid.Column="1" />
+            <Canvas Grid.Row="0" Grid.Column="2" />
+            
+            <Canvas Grid.Row="1" Grid.Column="2" />
+            <Canvas Grid.Row="2" Grid.Column="2" />
+            <Canvas Grid.Row="3" Grid.Column="2" />
+            <Canvas Grid.Row="4" Grid.Column="2" />
+        </Grid>
+    </DockPanel>
+</Window>
